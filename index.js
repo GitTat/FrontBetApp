@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import Login from './Login.js'
+import './Boardstyle.css';
+import Header from "./components/Header.js"
+import Menu from "./components/Menu.js";
 
-ReactDOM.render(<Login />, document.getElementById('root'));
-registerServiceWorker();
+class Board extends Component{
+  render(){
+    return(
+      <div className="return">
+        <Header/>
+        <Menu/>
+      </div>
+    );
+  }
 
+}
+ReactDOM.render(
+    <Board/>,
+   document.getElementById("root")
+ );
