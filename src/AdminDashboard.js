@@ -12,13 +12,17 @@ import { Route} from 'react-router'
 class AdminDashboard extends Component{
   render(){
     return(
-      <div >
-        <Header/>
-        <Menu/>
+      <div  className="return ">
+            
+              <Header/>
+              <Menu/>
+            
+            <main role="main"  >
        <Switch>
 				      <Route path='/table' component={Table}/>
 							<Route path='/addmailinglist' component={AddMailingList}/>
 				</Switch>
+        </main>
       </div>
     );
   }

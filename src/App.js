@@ -3,12 +3,12 @@ import AdminDashboard from './AdminDashboard.js';
 import Login from'./Login.js';
 import { Switch } from 'react-router-dom'
 import { Route, Redirect } from 'react-router'
-
+import './StyleSheet/App.css';
 class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="global_container">
              <Switch>
               <Route exact path='/' render={() => (
                 false ? (
