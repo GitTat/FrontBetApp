@@ -1,14 +1,21 @@
 .UserTable{
   	width: 100%;
+    height: 100%;
     background:#513654;
-
+    color:white;
 }
 .table{
-	
+	width: 90%;
+	margin:0px auto;
 	border:solid 2px black;
-border-collapse: collapse;
+    border-collapse: collapse;
 }
 .table td{
+	border:solid 2px black;
+	border-collapse: collapse;
+	text-align: center;
+}
+.table th{
 	border:solid 2px black;
 	border-collapse: collapse;
 	text-align: center;
@@ -25,18 +32,25 @@ border-collapse: collapse;
 	border-radius: 5px;
 	background: grey;
 	color: white;
+	margin: 5px;
 }
 .deletebutton{
 	border-radius: 5px;
 	background: red;
 	color:white;
+	margin: 5px;
 }
 .savebutton{
 	border-radius: 5px;
 	background: blue;
 	color:white;
+	margin: 5px;
 }
 #theader{
+	height: 30px;
 	color: white;
 	text-align: center;
+	font-size:30px;
+	border-top:solid 1px white;
+	padding:10px;
 }

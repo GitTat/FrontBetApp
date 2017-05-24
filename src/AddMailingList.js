@@ -1,4 +1,4 @@
-import './Boardstyle.css';
+import './StyleSheet/AddMailingList.css';
 import React, { Component } from 'react';
 const putmails = [];
 

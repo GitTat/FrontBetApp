@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TableHeader from'./TableHeader.js';
 import TableRow from './TableRow.js';
 import AddRowTable from './AddRowTable.js';
-import '../StyleSheet/UserTable.css';
+import '../StyleSheet/Table.css';
 
 import array from '../array.js';
 
@@ -21,7 +21,7 @@ class Table extends Component{
 			render(){
 		     	return(
 		     	<div className="UserTable">
-					 <h2 id="theader">User Info List</h2>
+					 <div id="theader">User Info List</div>
 			     	<table className="table">
 			     	<TableHeader headerdata={this.state.data[0]} className="tableheader"/>
 			     	<TableRow update={this.updateTable} dataArray={this.state.data}/>

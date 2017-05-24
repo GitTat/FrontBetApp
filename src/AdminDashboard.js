@@ -1,4 +1,4 @@
-import './Boardstyle.css';
+import './StyleSheet/Dashboard.css';
 import React, { Component } from 'react';
 import Table from './TableComponent/Table.js'
 import Header from "./Header.js"

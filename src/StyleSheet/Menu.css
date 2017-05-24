@@ -31,6 +31,11 @@
 .active{
     background-color:#513654;
 }
+.menu_item a{
+    text-decoration: none;
+    color: azure;
+    font-size: 1.2em;
+}
 @media (max-width:768px) {
 
     .menu{

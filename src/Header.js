@@ -1,5 +1,6 @@
-
+import './StyleSheet/Header.css';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component{
     constructor(){
@@ -46,11 +47,9 @@ class Header extends Component{
                  <div className="close_item"></div>
              </div>
              <ul className="menu_list">
-                 <li className="menu_item"><a href="">Home </a></li>
-                 <li className="menu_item"><a href="">News</a></li>
-                 <li className="menu_item"><a href="">About</a></li>
-                 <li className="menu_item"><a href="">Contact</a></li>
-                 <li className="menu_item"><a href="">Log Out</a></li>
+                 <li className="menu_item"><Link activeClassName="active" to='/table'>Table </Link></li>
+                 <li className="menu_item"><Link activeClassName="active" to='/addmailinglist'>MailList </Link></li>
+                 <li className="menu_item"><Link activeClassName="active" to='/login'>Log Out </Link></li>
              </ul>
          </div>
       </div>
