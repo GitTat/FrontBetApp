@@ -1,19 +1,18 @@
 import './Boardstyle.css';
 import React, { Component } from 'react';
 import Table from './TableComponent/Table.js'
-import array from './array.js';
 import Header from "./Header.js"
 import Menu from "./Menu.js";
 import AddMailingList from'./AddMailingList';
 
 
-import { Switch,withRouter } from 'react-router-dom'
-import { Redirect, Router, Route, DefaultRoute, browserHistory   } from 'react-router'
+import { Switch } from 'react-router-dom'
+import { Route} from 'react-router'
 
 class AdminDashboard extends Component{
   render(){
     return(
-      <div className="return">
+      <div >
         <Header/>
         <Menu/>
        <Switch>

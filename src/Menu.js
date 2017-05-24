@@ -1,8 +1,5 @@
-import AddMailingList from'./AddMailingList';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Switch,withRouter } from 'react-router-dom'
-import { Route, Redirect } from 'react-router'
 
 class Menu extends Component{
   render(){

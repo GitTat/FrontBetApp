@@ -14,10 +14,12 @@ class TableHeader extends Component{
 
 		  );
 		 	return(
+		 <thead>
 		 	<tr className="TableHeader">
 		 		{header}
 		 		<th colSpan="2">Actions</th>
 		 	</tr>
+		 </thead>
 		 	);
 		 }
 	}

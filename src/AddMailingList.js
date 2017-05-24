@@ -1,6 +1,5 @@
 import './Boardstyle.css';
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 const putmails = [];
 
 class AddMailingList extends Component {

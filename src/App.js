@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import array from './array.js';
 import AdminDashboard from './AdminDashboard.js';
 import Login from'./Login.js';
 import { Switch } from 'react-router-dom'
 import { Route, Redirect } from 'react-router'
-
-
-console.log('array:', array);
 
 class App extends Component {
 

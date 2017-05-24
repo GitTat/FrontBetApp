@@ -1,0 +1,22 @@
+.UserTable{
+  	width: 80%;
+    background:#513654;
+
+}
+.table{
+	
+	border:solid 2px black;
+border-collapse: collapse;
+}
+.table td{
+	border:solid 2px black;
+	border-collapse: collapse;
+}
+.tableheader{
+	width: 100%;
+	text-align: center;
+}
+.addtablerow{
+	background:red;
+	width: 100%;
+}
