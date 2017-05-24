@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import '../StyleSheet/MailingLists.css';
 import { EditAddList } from './EditAddList';
 
-const datab = ["DZMER PAPINER", "MARKETOLOGNER", "BJISHKNER", "PARAPNER", "SIRELI HAYRENAKICNER"]
+const datab = ["ATAMNABUJNER", "MARKETOLOGNER", "BJISHKNER", "BUSAKERNER", "SIRELI HAYRENAKICNER"]
 const Database = { name: "Marketologs", emails: ["eagis92@gmail.com", "easdsgis92@gmail.com", "eauytrfsgis92@gmail.com", "eagssfe@gmail.com", "mkhitaryan@mail.ru", "movsiyan@mail.ru", "petrosyan@mail.ru", "esiminchyan@esiminch.ru"] }
 
 class MailingLists extends Component {
