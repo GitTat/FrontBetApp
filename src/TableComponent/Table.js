@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TableHeader from'./TableHeader.js';
 import TableRow from './TableRow.js';
 import AddRowTable from './AddRowTable.js';
-import '../Table.css';
 import '../UserTable.css';
 
 import array from '../array.js';

@@ -1,5 +1,4 @@
 import './Boardstyle.css';
-import './Table.css';
 import React, { Component } from 'react';
 import Table from './TableComponent/Table.js'
 import array from './array.js';
