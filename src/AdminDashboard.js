@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Table from './TableComponent/Table.js'
 import Header from "./Header.js"
 import Menu from "./Menu.js";
-import AddMailingList from'./AddMailingList';
+import MailingLists from'./MailingLists/MailingLists';
+
 
 
 import { Switch } from 'react-router-dom'
@@ -20,7 +21,7 @@ class AdminDashboard extends Component{
             <main role="main"  >
        <Switch>
 				      <Route path='/table' component={Table}/>
-							<Route path='/addmailinglist' component={AddMailingList}/>
+							<Route path='/addmailinglist' component={MailingLists}/>
 				</Switch>
         </main>
       </div>
