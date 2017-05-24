@@ -21,7 +21,7 @@ class Table extends Component{
 			render(){
 		     	return(
 		     	<div className="UserTable">
-					 <h2 id="THeader">User Info List</h2>
+					 <h2 id="theader">User Info List</h2>
 			     	<table className="table">
 			     	<TableHeader headerdata={this.state.data[0]} className="tableheader"/>
 			     	<TableRow update={this.updateTable} dataArray={this.state.data}/>

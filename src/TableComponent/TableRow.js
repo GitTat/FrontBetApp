@@ -69,7 +69,7 @@ class TableRow extends Component{
 			     	<td key={editingrow.Id} id ="ids">
 			     	   {editingrow.Id}
 			     	</td>
-			     	<td colSpan="2"><button onClick={this.saveEditing}>Save Change</button><button onClick={this.cancel}>Cancel</button></td>
+			     	<td colSpan="2"><button onClick={this.saveEditing} className="savebutton" >Save Change</button><button onClick={this.cancel}>Cancel</button></td>
 		     	</tr>
 		     	 const row = data.map((data,index)=>
 		     	
@@ -86,7 +86,7 @@ class TableRow extends Component{
 			     	<td key={data.Id} id ="ids">
 			     	    {data.Id}
 			     	</td>
-			     	<td colSpan="2"><button className ="deletButton" onClick={this.deleteRow}  id={index}>Delete</button><button id ={index} onClick={this.editRow}>Edit</button></td>
+			     	<td colSpan="2"><button className ="deletebutton" onClick={this.deleteRow}  id={index}>Delete</button><button id ={index} onClick={this.editRow}>Edit</button></td>
 		     	</tr>
 		     	);
 
@@ -119,7 +119,7 @@ class TableRow extends Component{
 			     	<td key={data.Id} id ="ids">
 			     	    {data.Id}
 			     	</td>
-			     	<td colSpan="2"><button className = "deletButton" onClick={this.deleteRow}  id={index}>Delete</button><button id ={index} onClick={this.editRow}>Edit</button></td>
+			     	<td colSpan="2"> <button id ={index} onClick={this.editRow} className="editbutton">Edit</button><button className ="deletebutton" onClick={this.deleteRow}  id={index}>Delete</button></td>
 		     	</tr>
 		     	);
 		     	return(

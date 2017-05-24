@@ -11,12 +11,32 @@ border-collapse: collapse;
 .table td{
 	border:solid 2px black;
 	border-collapse: collapse;
+	text-align: center;
 }
 .tableheader{
 	width: 100%;
 	text-align: center;
+	color: white;
 }
 .addtablerow{
-	background:red;
 	width: 100%;
+}
+.editbutton{
+	border-radius: 5px;
+	background: grey;
+	color: white;
+}
+.deletebutton{
+	border-radius: 5px;
+	background: red;
+	color:white;
+}
+.savebutton{
+	border-radius: 5px;
+	background: blue;
+	color:white;
+}
+#theader{
+	color: white;
+	text-align: center;
 }
