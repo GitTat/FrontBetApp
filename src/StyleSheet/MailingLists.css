@@ -7,7 +7,8 @@
 .mail_area {
 	min-height: 300px;
 	overflow-y: auto;
-	border: solid 1px blue;
+	border: solid 1px #735a73;
+    margin: 5px 0;
 }
 
 .add_list {
@@ -29,6 +30,11 @@
 .list_input {
 	text-indent: 2%;
 	outline: none;
+    padding: 10px 0px;
+    font-size: 14px;
+    width: 688px;
+    margin: 5px 0px;
+    border: solid 1px #735a73;
 }
 
 .list_input:focus::-webkit-input-placeholder {
@@ -60,12 +66,12 @@
 	border-bottom: 1px solid white;
 }
 
+
 .searchMail {
-	position: absolute;
-	width: 100%;
-	top: 70%;
-	z-index: 23333;
-	background: aliceblue;
+	width: 690px;
+    z-index: 23333;
+    background: aliceblue;
+    position: absolute;
 }
 
 .searchRes:hover {
@@ -108,7 +114,7 @@
 }
 
 .listbut {
-        padding: 10px;
+    padding: 10px;
     color: black;
   
     border-radius: .1rem;
@@ -138,9 +144,7 @@
 	cursor: pointer;
 }
 
-.listbut:hover {
-	background: white;
-}
+
 
 @media (max-width: 768px) {
 	.menuListWrap {

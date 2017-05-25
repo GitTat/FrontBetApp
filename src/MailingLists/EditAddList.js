@@ -22,6 +22,12 @@ class EditAddList extends Component {
             this.setState({ putmails: this.props.database.emails })
         }
     }
+
+    componentWillUnmount(){
+        if(!this.props.editMode){
+            this.setState({ putmails: [] })
+        }
+    }
     // Searching and autoComplete the database
     autoOffer(e) {
         const database = this.props.database.emails
@@ -73,20 +79,20 @@ class EditAddList extends Component {
         return (
             <div>
                 <div className="menuListWrap">
-                    <h3 className="list_head">Add new Mailing List</h3>
+
                     <div className="add_list">
                         <form action="#" method="POST">
-                            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input className="mdl-textfield__input list_input" type="text" id="list_name" required name="listname" placeholder="Mailing List Name" />
+                            <div>
+                                <input className="list_input" type="text" id="list_name" required name="listname" placeholder="Mailing List Name" />
                             </div>
-                            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input className="mdl-textfield__input list_input" onChange={this.autoOffer} type="email" id="addtolist" name="emails" placeholder="Add Emails to List" />
+                            <div>
+                                <input className="list_input" onChange={this.autoOffer} type="email" name="emails" placeholder="Add Emails to List" />
                                 <div className="searchMail">{this.state.mydata.map(this.renderOptions.bind(this))}</div>
                             </div>
                             <div className="mail_area" name="all_emails">
                                 {this.state.putmails.map(this.renderPuttingMails)}
                             </div>
-                            <button onClick={this.props.editFunc} className="mdl-button mdl-button--raised mdl-button--colored save_list" name="submit" type="submit">Save</button>
+                            <button onClick={this.props.closeMode} className="listbut save_list" name="submit" type="submit">Save</button>
                         </form>
                     </div>
                 </div>
