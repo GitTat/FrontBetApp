@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import '../StyleSheet/MailingLists.css';
 import { EditAddList } from './EditAddList';
 

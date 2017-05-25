@@ -7,8 +7,8 @@ import MailingLists from'./MailingLists/MailingLists';
 
 
 
-import { Switch } from 'react-router-dom'
-import { Route} from 'react-router'
+import { Switch } from 'react-router-dom';
+import { Route, Redirect} from 'react-router';
 
 class AdminDashboard extends Component{
   render(){
@@ -22,6 +22,7 @@ class AdminDashboard extends Component{
        <Switch>
 				      <Route path='/table' component={Table}/>
 							<Route path='/addmailinglist' component={MailingLists}/>
+              <Redirect to="/table"/>
 				</Switch>
         </main>
       </div>

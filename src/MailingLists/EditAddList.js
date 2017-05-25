@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 
 class EditAddList extends Component {
@@ -28,7 +27,7 @@ class EditAddList extends Component {
         const database = this.props.database.emails
         const stores = [];
         database.forEach(function (value, key) {
-            if (value.indexOf(e.target.value) != -1 && e.target.value.length > 1) {
+            if (value.indexOf(e.target.value) !== -1 && e.target.value.length > 1) {
                 stores.push(value);
             }
             else {
@@ -52,7 +51,7 @@ class EditAddList extends Component {
     };
 
     deleteEmails(e) {
-        const valuesof = this.state.putmails.filter((value) => { return value != e.target.parentNode.previousSibling.innerHTML });
+        const valuesof = this.state.putmails.filter((value) => { return value !== e.target.parentNode.previousSibling.innerHTML });
         this.setState({ putmails: valuesof });
     };
 
