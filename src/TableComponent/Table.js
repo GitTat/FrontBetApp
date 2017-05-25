@@ -21,13 +21,16 @@ class Table extends Component{
 			render(){
 		     	return(
 		     	<div className="UserTable">
-					 <div id="theader">User Info List</div>
+				<div id="theader">User Info List</div>
+					<div id="scroll">
 			     	<table className="table">
 			     	<TableHeader headerdata={this.state.data[0]} className="tableheader"/>
 			     	<TableRow update={this.updateTable} dataArray={this.state.data}/>
 			     	</table>
-			     	<AddRowTable  update={this.updateTable} Id={this.state.data.length + 1} className="addrowtable"/>
+					
 			     </div>
+				 <AddRowTable  update={this.updateTable} Id={this.state.data.length + 1} className="addrowtable"/>
+				 </div>
 		     	);
 		     }
      	

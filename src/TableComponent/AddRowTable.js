@@ -43,7 +43,7 @@ class AddRowTable extends Component{
 				}
 			return(
 					<div className="AddRow">
-						<button  onClick={this.addRow}>Add Row Table</button>
+						<button className="btn_table" onClick={this.addRow}>Add Row Table</button>
 					</div>
 			);
 		}

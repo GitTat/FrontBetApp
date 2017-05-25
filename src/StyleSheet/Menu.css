@@ -7,12 +7,19 @@
     justify-content:center;
     height: 90%;
     float:left;
+	position:fixed;
+	top:10%;
 }
 .list_menu{
+	text-decoration: none;
     list-style-type: none;
     width: 100%;
 }
 .menu_item{
+	text-decoration: none;
+    color: azure;
+    font-size: 1.2em;
+	
     width:100%;
     text-align: left;
     height: 60px;
@@ -25,23 +32,14 @@
     cursor: pointer;
     transition: .5s ;
 }
+
 .menu_item:hover{
     background-color:#513654;
 }
-.active{
-    background-color:#513654;
-}
-.menu_item a{
-    text-decoration: none;
-    color: azure;
-    font-size: 1.2em;
-}
+
 @media (max-width:768px) {
 
     .menu{
         display: none;
     }
-     
-
-
 }

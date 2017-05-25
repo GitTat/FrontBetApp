@@ -1,5 +1,9 @@
 .header_container{
+position:fixed;
     height:10%;
+	width:100%;
+	top:0;
+	
 }
 .flex{
     display:flex;
@@ -21,8 +25,9 @@
     color: #fff;
     text-decoration: none;
 }
-.content{
-    height: 90%;
+
+h1{
+		font-size:3em;
 }
 
 .icon_item{
@@ -33,7 +38,7 @@
     border-radius:5px;
 }
 .header{
-    width:95%;
+    width:90%;
     justify-content: space-between;
     align-items: center;
 }
@@ -139,8 +144,18 @@
     }
 
     .list{
-        justify-content: flex-start;
+        justify-content: center;
     }
+	
+	.list_item:nth-child(2){
+		display:none;
+	}
+	
+	
+	
+	h1{
+		font-size:25px;
+	}
 }
   .menuListWrap{    /*Add New Menu List */
         width: 90%;

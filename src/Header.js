@@ -35,7 +35,7 @@ class Header extends Component{
                   <div className="user flex">
                       <ul className="list flex">
                           <li className="list_item">Username</li>
-                          <li className="list_item">Log Out</li>
+                          <li className="list_item"><Link activeClassName="active" to='/login'>Log out</Link></li>
                       </ul>
                   </div>
               </div>
