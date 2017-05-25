@@ -45,8 +45,8 @@ class MailingLists extends Component {
         return (
             datab.map(function (value, key) {
                 return (<tr key={key} className="mail_row"><td className=" tabledata mailVal">{value}</td>
-                    <td className="tabledata"><button className="listbut mdl-button mdl-js-button mdl-button--raised" onClick={that.handleEdit.bind(that)}>EDIT</button></td>
-                    <td className="tabledata"><button onClick={that.handleAddNew.bind(that)} className="listbut mdl-button mdl-js-button mdl-button--raised">ADD NEW</button></td></tr>)
+                    <td className="tabledata"><button className="listbut btn_table" onClick={that.handleEdit.bind(that)}>EDIT</button></td>
+                    <td className="tabledata"><button onClick={that.handleAddNew.bind(that)} className="listbut btn_table">ADD NEW</button></td></tr>)
             })
         )
     }

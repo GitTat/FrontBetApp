@@ -108,7 +108,18 @@
 }
 
 .listbut {
-	background: white;
+        padding: 10px;
+    color: black;
+  
+    border-radius: .1rem;
+    border: 0px solid transparent;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0px 0px 0 rgba(56,38,0,1);
+    box-shadow: 0 0px 0px 0 rgba(56,38,0,1);
+	background: #735a73;
 }
 
 .mailVal {
