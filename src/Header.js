@@ -1,6 +1,6 @@
 import './StyleSheet/Header.css';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component{
     constructor(){
@@ -35,7 +35,7 @@ class Header extends Component{
                   <div className="user flex">
                       <ul className="list flex">
                           <li className="list_item">Username</li>
-                          <li className="list_item"><Link activeClassName="active" to='/login'>Log out</Link></li>
+                          <li className="list_item"><NavLink activeClassName="active" to='/login'>Log out</NavLink></li>
                       </ul>
                   </div>
               </div>
@@ -47,9 +47,9 @@ class Header extends Component{
                  <div className="close_item"></div>
              </div>
              <ul className="menu_list">
-                 <li className="menu_item"><Link activeClassName="active" to='/table'>Table </Link></li>
-                 <li className="menu_item"><Link activeClassName="active" to='/addmailinglist'>MailList </Link></li>
-                 <li className="menu_item"><Link activeClassName="active" to='/login'>Log Out </Link></li>
+                 <li className="menu_item"><NavLink activeClassName="active" to='/table'>Table </NavLink></li>
+                 <li className="menu_item"><NavLink activeClassName="active" to='/addmailinglist'>MailList </NavLink></li>
+                 <li className="menu_item"><NavLink activeClassName="active" to='/login'>Log Out </NavLink></li>
              </ul>
          </div>
       </div>

@@ -62,7 +62,7 @@ h1{
 }
 
 .list_item{
-  cursor:pointer;
+   cursor:pointer;
     width:120px;
     text-align: right;
     text-decoration: none;
@@ -108,7 +108,6 @@ h1{
     border-bottom: 1px solid #adadad;
     box-sizing: border-box;
     display: flex;
-    padding-left:35px;
     justify-content: flex-start;
     align-items:center;
     cursor: pointer;
@@ -125,6 +124,12 @@ h1{
     text-decoration: none;
     color: azure;
     font-size: 1.2em;
+}
+.active{
+    background-color:#513654;
+}
+a :active{
+    background-color:#513654;
 }
 
 

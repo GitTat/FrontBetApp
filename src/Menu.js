@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './StyleSheet/Menu.css';
 
 class Menu extends Component{
@@ -8,8 +8,8 @@ class Menu extends Component{
       
           <div className="menu">
                   <ul className="list_menu">
-                      <li className="menu_item"><Link activeClassName="active" to='/table'>Table </Link></li>
-                      <li className="menu_item"><Link activeClassName="active" to='/addmailinglist'>MailList </Link></li>
+                      <li className="menu_item"><NavLink activeClassName="active" to='/table'>Table </NavLink></li>
+                      <li className="menu_item"><NavLink activeClassName="active" to='/addmailinglist'>MailList </NavLink></li>
                  </ul>
           </div>
       
