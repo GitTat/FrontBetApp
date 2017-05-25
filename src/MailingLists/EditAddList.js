@@ -10,20 +10,20 @@ class EditAddList extends Component {
         this.deleteEmails = this.deleteEmails.bind(this);
         this.renderPuttingMails = this.renderPuttingMails.bind(this);
         this.renderOptions = this.renderOptions.bind(this);
-        this.state = { mydata: [], putmails: [], save: false};
-         
+        this.state = { mydata: [], putmails: [], save: false };
+
     };
 
-saving(){
-this.setState({save: true})
-}
+    saving() {
+        this.setState({ save: true })
+    }
 
- componentDidMount() {
-    if (this.props.editMode) {
+    componentDidMount() {
+        if (this.props.editMode) {
             this.setState({ putmails: this.props.database.emails })
         }
- }
- // Searching and autoComplete the database
+    }
+    // Searching and autoComplete the database
     autoOffer(e) {
         const database = this.props.database.emails
         const stores = [];
@@ -39,7 +39,8 @@ this.setState({save: true})
         console.log(this.state.mydata);
     };
 
-// Inserting email to list and deleting the added email from Offerred list  
+
+    // Inserting email to list and deleting the added email from Offerred list  
     putMail(e) {
         const temporary = [];
         temporary.push(e.target.innerHTML);

@@ -12,35 +12,45 @@ class MailingLists extends Component {
         this.state = { edit: false, addNew: false, };
         this.handleEdit = this.handleEdit.bind(this);
         this.hideEdit = this.hideEdit.bind(this);
+
     }
 
     handleEdit(e) {
         e.preventDefault()
-        this.setState({ edit: !this.state.edit });
+        this.setState({ edit: true });
         console.log(this.state.edit)
     }
 
     hideEdit(e) {
         e.preventDefault();
-        this.setState({ edit: !this.state.edit })
+        if (this.state.edit) {
+            this.setState({ edit: !this.state.edit })
+        }
+        else {
+            this.setState({ addNew: !this.state.addNew })
+        }
+
+
         console.log(this.state.edit)
     }
 
+
+
     handleAddNew() {
-        this.setState({ addNew: !this.state.addNew })
+        this.setState({ addNew: true })
     }
 
     renderTbody() {
         let that = this;
         return (
             datab.map(function (value, key) {
-                return (<tr key={key} className=""><td className=" tabledata mailVal">{value}</td>
+                return (<tr key={key} className="mail_row"><td className=" tabledata mailVal">{value}</td>
                     <td className="tabledata"><button className="listbut mdl-button mdl-js-button mdl-button--raised" onClick={that.handleEdit.bind(that)}>EDIT</button></td>
                     <td className="tabledata"><button onClick={that.handleAddNew.bind(that)} className="listbut mdl-button mdl-js-button mdl-button--raised">ADD NEW</button></td></tr>)
             })
         )
     }
-    
+
     renderExistedList() {
         return (
             <div className="mainCont">
@@ -62,12 +72,8 @@ class MailingLists extends Component {
         if (this.state.edit) {
             return (
                 <div>
-                    <div>
-                        {this.renderExistedList()}
-                    </div>
-                    <div>
-                        <EditAddList editMode={this.state.edit} editFunc={this.hideEdit} database={Database} />
-                    </div>
+                    <div>{this.renderExistedList()}</div>
+                    <div><EditAddList editMode={this.state.edit} editFunc={this.hideEdit} database={Database} /></div>
                 </div>
             )
         }
@@ -75,7 +81,7 @@ class MailingLists extends Component {
             return (
                 <div>
                     <div>{this.renderExistedList()}</div>
-                    <div><EditAddList /></div>
+                    <div><EditAddList addNewMode={this.state.addNew} editFunc={this.hideEdit} database={Database} /></div>
                 </div>
             )
         }
