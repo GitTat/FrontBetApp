@@ -9,6 +9,7 @@
     float:left;
 	position:fixed;
 	top:10%;
+	
 }
 .list_menu{
 	text-decoration: none;
@@ -19,8 +20,7 @@
 	text-decoration: none;
     color: azure;
     font-size: 1.2em;
-	
-    width:100%;
+	width:100%;
     text-align: left;
     height: 60px;
     border-bottom: 1px solid #adadad;

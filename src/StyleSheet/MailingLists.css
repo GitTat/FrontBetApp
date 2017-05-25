@@ -84,6 +84,8 @@
 
 .mainCont {
 	width: 690px;
+	margin: 0 auto;
+	
 }
 .mailingListTable {
 	border-collapse: collapse;

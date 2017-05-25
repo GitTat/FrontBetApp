@@ -10,8 +10,6 @@ class Menu extends Component{
                   <ul className="list_menu">
                       <li className="menu_item"><Link activeClassName="active" to='/table'>Table </Link></li>
                       <li className="menu_item"><Link activeClassName="active" to='/addmailinglist'>MailList </Link></li>
-                      <li className="menu_item"><Link activeClassName="active" to='/login'>Login Page </Link></li>
-                      
                  </ul>
           </div>
       
