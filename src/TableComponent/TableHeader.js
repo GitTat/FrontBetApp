@@ -4,20 +4,20 @@ class TableHeader extends Component{
 		 render(){
 
 		 const obj=this.props.headerdata;
+		 console.log(obj)
 		 let headers =[];
-			  for(let i in obj){
+			 	for(let i in obj){
 			  		headers.push(i);
-			  }
-		  //console.log("TableHeader Data :",headers);
-		  let header = headers.map((headers,index)=>
-		  	<th key={index}>{headers}</th>
-
-		  );
+					  console.log(headers);
+				}
 		 	return(
 		 <thead>
 		 	<tr >
-		 		{header}
-		 		<th colSpan="2">Actions</th>
+		 		<th>Full Name</th>
+		  		<th>Company Name </th>	
+		  		<th>Position</th>	
+		  		<th>Country </th>
+		  		<th>Email </th>
 		 	</tr>
 		 </thead>
 		 	);

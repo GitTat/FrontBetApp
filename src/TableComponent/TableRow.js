@@ -100,26 +100,30 @@ class TableRow extends Component{
 		     	);
 
 		      }
+			  
 		      const row = data.map((data,index)=>
 		     	<tr key={index} ref={index}>
-			     	<td key={data.Firstname}>
+			     	<td key={data.FullName}>
 				     	<EditRow update={this.props.update} data={data.Firstname} propName="Firstname" editingData={this.state.editRowData} 
 				     	show={this.state.editingShow} indexEdit={this.state.editRowIndex}/>
-				     	{data.Firstname}
+				     	{data.FullName}
 			     	</td>
-			     	<td key={data.Lastname}>
+			     	<td key={data.CompanyName}>
 				     	<EditRow update={this.props.update} data={data.Lastname} propName="Lastname" editingData={this.state.editRowData} 
 				     	show={this.state.editingShow} indexEdit={this.state.editRowIndex}/>
-				     	{data.Lastname}
+				     	{data.CompanyName}
 				     </td>
-			     	<td key={data.Mail}>
+			     	<td key={data.Position}>
 			     	    <EditRow update={this.props.update} data={data.Mail} propName="Mail" editingData={this.state.editRowData} show={this.state.editingShow} indexEdit={this.state.editRowIndex}/>
-			     	    {data.Mail}
+			     	    {data.Position}
 			     	</td>
-			     	<td key={data.Id} id ="ids">
-			     	    {data.Id}
+			     	<td key={data.Country} id ="ids">
+			     	    {data.Country}
 			     	</td>
-			     	<td colSpan="2"> <button id ={index} onClick={this.editRow} className="editbutton">Edit</button><button className ="deletebutton" onClick={this.deleteRow}  id={index}>Delete</button></td>
+					 <td key={data.Email} id ="ids">
+			     	    {data.Email}
+			     	</td>
+			     	{/*<td colSpan="2"> <button id ={index} onClick={this.editRow} className="editbutton">Edit</button><button className ="deletebutton" onClick={this.deleteRow}  id={index}>Delete</button></td>*/}
 		     	</tr>
 		     	);
 		     	return(
