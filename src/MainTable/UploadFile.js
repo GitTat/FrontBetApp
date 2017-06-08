@@ -33,8 +33,9 @@ class UploadFile extends Component {
             "Accept": "application/json",
             body: data
         }).then(function (res) {
+            console.log(res);
             if (res.ok) {
-                call('api/contacts', 'GET').then(response => { response.error ? response.message : that.props.change(response); that.setState({ loading: false }) });
+                call('api/contacts', 'GET').then(response => { response.error ? response.message : that.props.change(response), that.setState({ loading: false }) });
             }
             else {
                 that.setState({ loading: false });

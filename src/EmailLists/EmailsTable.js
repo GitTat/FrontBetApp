@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import call from '../helpers/call.js';
 import { LoadingGIF } from '../exceptionHandling/LoadingGIF.js';
 import { Deleted } from '../exceptionHandling/Deleted.js';
 import { MessageFailed } from '../exceptionHandling/MessageFailed.js';
@@ -12,8 +13,7 @@ class EmailsTable extends Component {
             disabling: true,
             delete: true,
             loading: false,
-            deleted: false,
-            resp: ""
+            deleted: false
         };
         this.mapList = this.mapList.bind(this);
         this.checkBoxDel = this.checkBoxDel.bind(this);
@@ -33,7 +33,7 @@ class EmailsTable extends Component {
 
     deletedMsg() {
         this.setState({ deleted: true });
-        setTimeout(function () { this.setState({ deleted: false }); this.closeDel(); this.props.updateContacts(this.state.resp) }.bind(this), 2500);
+        setTimeout(function () { this.setState({ deleted: false }) }.bind(this), 2500);
     }
 
     checkBoxDel(e) {
@@ -74,12 +74,12 @@ class EmailsTable extends Component {
                         </form>
                         {this.state.loading && <LoadingGIF />}
                     </div>
-                    <button disabled={this.state.disabling} className="edit_delete del list_buttons" onClick={this.handleDel}>Delete</button>
+                    <button disabled={this.state.disabling} className="edit_delete del list_buttons" onClick={this.handleDel}>DELETE</button>
                 </div>
             )
         }
         else {
-            return (<button disabled={this.state.disabling} className="edit_delete del list_buttons" onClick={this.handleDel}>Delete</button>)
+            return (<button disabled={this.state.disabling} className="edit_delete del list_buttons" onClick={this.handleDel}>DELETE</button>)
         }
     }
 
@@ -91,6 +91,7 @@ class EmailsTable extends Component {
             "Guids": this.state.guId
         };
         deleteData = JSON.stringify(deleteData);
+        console.log(deleteData);
         let that = this;
 
         return fetch('http://crmbetd.azurewebsites.net/api/emaillists', {
@@ -115,7 +116,7 @@ class EmailsTable extends Component {
                         that.failedMsg();
                     }
                 }).then(function (response) {
-                    that.setState({ resp: response.Contacts });
+                    that.props.updateContacts(response.Contacts);
                 })
             }
             else {
@@ -147,7 +148,7 @@ class EmailsTable extends Component {
     render() {
         if (this.props.datas.length > 0) {
             return (
-                <div className="scroll_list">
+                <div>
                     <button onClick={this.closeList} className="edit_delete closelist">Close</button>
                     <table className="all_contacts">
                         <thead>
