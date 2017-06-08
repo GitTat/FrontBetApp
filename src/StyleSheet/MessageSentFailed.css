@@ -1,0 +1,16 @@
+.msg-sent-failed{
+    
+    top: 44%;
+    left: 45%;
+    position: fixed;
+    border-radius: 41%;
+    background-color: #7e748e;
+    border: none;
+    color: #00bcd4;
+    padding: 2% 5%;
+    font-size: 60px;
+    font-family: font;
+}
+.fail {
+        color: #ff4081
+}

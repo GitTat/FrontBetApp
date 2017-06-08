@@ -30,32 +30,22 @@ class Header extends Component{
              </div>
               <div className="header flex">
                   <div className="logo">
-                      <h1>BetBoard</h1>
-                  </div>
-                  <div className="user flex">
-                      <ul className="list flex">
-                          <li className="list_item">Username</li>
-                          <li className="list_item"><NavLink activeClassName="active" to='/login'>Log out</NavLink></li>
-                      </ul>
+                      <h1 className="main_header">CRM Bet</h1>
                   </div>
               </div>
          </div>
-
          <div id="sidenav" style={{width:this.state.width}}>
              <div className="close_icon" onClick={this.closeNav}>
                  <div className="close_item"></div>
                  <div className="close_item"></div>
              </div>
              <ul className="menu_list">
-                 <li className="menu_item"><NavLink activeClassName="active" to='/table'>Table </NavLink></li>
-                 <li className="menu_item"><NavLink activeClassName="active" to='/addmailinglist'>MailList </NavLink></li>
-                 <li className="menu_item"><NavLink activeClassName="active" to='/sendemails'> Send Email </NavLink></li>
-                 <li className="menu_item"><NavLink activeClassName="active" to='/login'>Log Out </NavLink></li>
+                 <li className="menu_item"><NavLink activeClassName="active" to='/Contacts'>Contacts</NavLink></li>
+                 <li className="menu_item"><NavLink activeClassName="active" to='/MailingList'>Mailing List </NavLink></li>
              </ul>
          </div>
       </div>
     );
   }
 }
-
 export default Header;
